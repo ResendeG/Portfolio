@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Chakra+Petch:wght@300;400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&family=Teko:wght@300;400;500;600;700&family=Tektur:wght@400;500;600;700;800&display=swap');
+@import url('/css/menu.css');
+@import url('/css/inicio.css');
+@import url('/css/sobreMim.css');
+@import url('/css/projetos.css');
+@import url('/css/certificados.css');
+@import url('/css/habilidades.css');
+@import url('/css/contato.css');
+@import url('/css/footer.css');
+
+:root {
+    --letra-branco: #FFFFFF;
+    --letra-cinza: #8a8787;
+    --letra-preto: #000000;
+    --bg-preto: #000000;
+    --bg-cinza: #070707;
+    --azul-neon: #00FFD9;
+    --azul-claro: #12B2B8;
+    --azul-ceu: #0073FF;
+    --azul-medio: #026C7C;
+    --azul-escuro: #003e49;
+    --linear-azul: linear-gradient(45deg, #00FFD9 10%, #12B2B8 25%, #026C7C 50%, #00FFD9 75%, #055864 100%);
+    --sombra: #08f8ec56;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}

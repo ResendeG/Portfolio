@@ -1,0 +1,98 @@
+.habilidades {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 5rem 2rem;
+    background: var(--bg-cinza);
+    font-family: 'Chakra Petch', sans-serif;
+    height: 600px;
+    overflow: hidden;
+    position: relative;
+}
+
+.habilidades::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(transparent, #131212fd);
+}
+
+#ver-mais, #verMais-sobreMim {
+    width: 100px;
+    background-color: var(--bg-preto);
+    color: var(--letra-branco);
+    border: 2px solid var(--azul-medio);
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 45%;
+}
+
+#ver-mais:hover, #verMais-sobreMim:hover {
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0px 0px 10px var(--azul-neon);
+}
+
+.habilidades.active {
+    height: auto;
+}
+
+.habilidades.active::before {
+    visibility: hidden;
+}
+
+.skills {
+    display: flex;
+    margin: 1rem auto;
+    justify-content: center;
+}
+
+.descricao-habilidades {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    width: 600px;
+    margin-top: 1.5rem;
+}
+
+.titulo-habilidades {
+    color: var(--azul-claro);
+    font-weight: 800;
+}
+
+.texto-habilidades {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.logos-habilidades {
+    display: flex;
+    margin-left: 5rem;
+    align-items: center;
+    width: 250px;
+}
+
+.img-habilidades {
+    width: 100px;
+    height: 100px;
+    margin-right: 1rem;
+}
+
+@media screen and (max-width:1100px) {
+    .logos-habilidades {
+        display: none;
+    }
+}
+
+@media screen and (max-width:620px) {
+    .descricao-habilidades {
+        width: auto;
+    }
+
+    #ver-mais, #verMais-sobreMim {
+        left: 40%;
+    }
+}

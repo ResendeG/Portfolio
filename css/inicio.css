@@ -1,0 +1,157 @@
+.inicio {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    background: var(--bg-cinza);
+}
+
+.nome-texto {
+    display: flex;
+    font-family: 'Chakra Petch', sans-serif;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 5rem;
+}
+
+.nome {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 0rem;
+}
+
+.textoAnimado {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--azul-neon);
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.1em solid var(--azul-medio);
+    animation: letras-animadas 4s steps(40, end), barra-animada 0.75s step-end infinite;
+}
+
+@keyframes letras-animadas {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+}
+  
+@keyframes barra-animada {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: var(--azul-neon);
+    }
+}
+
+.redes-sociais {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.link-icons {
+    display: flex;
+    position: relative;
+}
+.icon-linkedin2, .icon-github2, .icon-instragam2 {
+    position: absolute;
+    transform: scale(1.5);
+    transition: ease-in-out 0.8s;
+    opacity: 0;
+}
+
+.icon-linkedin2:hover, .icon-github2:hover, .icon-instragam2:hover {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: ease-in-out 0.8s;
+}
+
+.icon-linkedin2:hover, .icon-github2:hover, .icon-instragam2:hover {
+    opacity: 100%;
+    transform: scale(1);
+    transition: ease-in-out 0.8s;
+}
+
+.simbolos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 350px;
+    filter: drop-shadow(0px 0px 50px rgba(4, 247, 255, 0.767));
+    position: relative;
+}
+
+.img-inicio {
+    width: 220px;
+}
+
+.simbolos-icones {
+    width: 60px;
+    position: absolute;
+    animation: zoomInOut 2s ease-in-out infinite;
+}
+
+.programacao {
+    top: 40px;
+    left: 20px;
+}
+
+.javascript {
+    bottom: 0px;
+    right: 20px;
+}
+
+.html {
+    bottom: 0;
+    left: 0;
+}
+
+.css {
+    top: -2px;
+    right: 0;
+}
+
+@keyframes zoomInOut {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+.simbolos-icones:hover, .img-inicio:hover {
+    filter: drop-shadow(0px 0px 50px rgba(55, 0, 255, 0.801));
+}
+
+@media screen and (max-width: 1050px) {
+    .inicio {
+        flex-direction: column-reverse;
+        gap: 5rem;
+    }
+
+    .nome-texto {
+        margin-right: 0rem;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .nome {
+        font-size: 2.75rem;
+    }
+
+    .textoAnimado {
+        font-size: 1.75rem;
+    }
+
+    .simbolos {
+        width: 350px;
+    }
+}

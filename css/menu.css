@@ -1,0 +1,123 @@
+.menu-navbar {
+    display: flex;
+    width: 100vw;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Chakra Petch', sans-serif;
+    padding: 1rem;
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    background: var(--bg-preto);
+    box-shadow: rgba(61, 61, 61, 0.25) 0px 5px 5px;
+}
+
+.logo {
+    display: flex;
+    position: relative;
+}
+.logo_menu_2 {
+    position: absolute;
+    transform: scale(1.2);
+    transition: ease-in-out 0.8s;
+    opacity: 0;
+}
+
+.logo_menu:hover {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: ease-in-out 0.8s;
+}
+
+.logo_menu_2:hover {
+    opacity: 100%;
+    transform: scale(1);
+    transition: ease-in-out 0.8s;
+}
+
+.nav .nav-item .nav-link {
+    color: var(--letra-branco);
+}
+
+.nav-item {
+    position: relative;
+    margin-right: 1.25rem;
+}
+
+.nav-item::after {
+    content: " ";
+    width: 0%;
+    height: 1.5px;
+    background: var(--azul-neon);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+.nav-hamburguer {
+    transition: .3s ease;
+}
+
+.menu-hamburguer, .menu-fechar, .nav-hamburguer {
+    display: none;
+}
+
+@media screen and (max-width: 1100px) {
+    .nav {
+        display: none!important;
+    }
+
+    .menu-hamburguer{
+        display: flex;
+    }
+
+    .menu-hamburguer, .menu-fechar {
+        cursor: pointer;
+        margin-right: 1rem;
+    }
+
+    .menu-navbar {
+        justify-content: space-between;
+    }
+
+    .nav-hamburguer {
+        flex-direction: column;
+        list-style: none;
+        position: fixed;
+        width: auto;
+        height: auto;
+        top: 20rem;
+        justify-content: center;
+        align-items: center;
+        z-index: 2;
+        color: var(--letra-preto);
+        background: var(--bg-preto);
+        border: 2px solid var(--azul-neon);
+        border-right: none;
+        gap: 1rem;
+        padding: 0.5rem;
+        border-radius: 1rem 0 0 1rem;
+        right: 0;
+    }
+
+    .menu-hamburguer:active {
+        transform: scale(1.2);
+    }
+
+    .nav-link > img {
+        padding: 0.5rem;
+    }
+
+    .menu-item a{
+        border-radius: 0.5rem;
+    }
+
+    .menu-item a:hover {
+        background: var(--azul-escuro);
+    }
+}

@@ -1,0 +1,21 @@
+.footer {
+    display: flex;
+    justify-content: center;
+    font-family: 'Chakra Petch', sans-serif;
+    padding: 2rem;
+    color: var(--letra-preto);
+    font-weight: 600;
+    background: var(--linear-azul);
+    background-size: 300%;
+    animation: gradient 8s ease infinite;
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        } 50% {
+            background-position: 100% 0%;
+        } 100% {
+            background-position: 0% 50%;
+    }
+}

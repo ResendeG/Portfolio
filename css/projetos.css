@@ -1,0 +1,178 @@
+.projetos {
+    background: var(--bg-cinza);
+    text-align: center;
+    padding: 5rem;
+    overflow: hidden;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.swiperProjetos {
+    display: flex;
+    width: 800px;
+    height: 600px;
+}
+
+.swiperProjetos .swiper-slide {
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background: var(--bg-preto);
+    border: 2px solid var(--azul-neon);
+}
+
+.img-card {
+    margin-top: 1.5rem;
+    width: 600px;    
+    box-shadow: var(--sombra) 0px 0px 5px 5px;
+}
+
+div .custom-button-next1, div .custom-button-prev1{
+    color: var(--azul-neon);
+}
+
+div .custom-button-prev1 {
+    left: -100px;
+}
+
+div .custom-button-next1 {
+    right: -100px;
+}
+
+.titulo-card {
+    color: var(--azul-neon);
+    margin-top: 2rem;
+}
+
+.texto-card {
+    position: relative;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+.cursor {
+    position: absolute;
+    bottom: 35px;
+    right: 80px;
+    width: 30px;
+    animation: zoomInOut 2s ease-in-out infinite;
+}
+
+.card-verso {
+    display: none;
+}
+
+.swiperProjetos .swiper-slide:hover {
+    box-shadow: 0px 0px 5px 5px var(--azul-neon);
+    display: flex;
+
+    .titulo-card, .texto-card, .img-card, .cursor{
+        display: none;
+    }
+
+    .card-verso {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .titulo-hover {
+        color: var(--azul-claro);
+        margin-bottom: 2rem;
+    }
+
+    .repositorio, .site {
+        font-weight: 500;
+    }
+
+    .link-cards {
+        font-size: 1.25rem;
+        text-decoration: none;
+        cursor: pointer;
+        color: var(--letra-branco);
+        padding: 2rem 1rem;
+    }
+
+    .repositorio, .site {
+        background: var(--azul-medio);
+        border: 2px solid var(--azul-claro);
+        border-radius: 2px;
+        width: 200px;
+        cursor: pointer;
+        transition: ease-in-out 0.5s;
+    }
+
+    .repositorio:hover, .site:hover {
+        box-shadow: var(--sombra) 0px 0px 5px 5px;
+        transform: scale(0.94);
+        transition: ease-in-out 0.5s;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .projetos {
+        padding: 5rem 1rem;
+    }
+    .swiperProjetos {
+        width: 600px;
+        height: 500px;
+    }
+
+    .img-card {
+        width: 400px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 798px) {
+    div .custom-button-prev1 {
+        left: -55px;
+    }
+
+    div .custom-button-prev1::before,
+    div .custom-button-prev1::after {
+        font-size: 20px;
+    }
+    
+    div .custom-button-next1 {
+        right: -55px;
+    }
+
+    div .custom-button-next1::before,
+    div .custom-button-next1::after {
+        font-size: 20px;
+    }
+
+    .swiperProjetos {
+        width: auto;
+        max-width: 400px;
+        height: 450px;
+    }
+
+    .img-card {
+        width: 300px;
+        height: auto;
+    }
+
+    .swiperProjetos .swiper-slide {
+        padding: 1rem;
+    }
+
+    .cursor {
+        bottom: 15px;
+        right: 10px;
+    }
+}
+
+@media screen and (max-width: 565px) {
+    div .custom-button-prev1 {
+        left: 120px;
+        top: 480px;
+    }
+
+    div .custom-button-next1 {
+        right: 120px;
+        top: 480px;
+    }
+}

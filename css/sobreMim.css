@@ -1,0 +1,98 @@
+.sobre-mim {
+    background: var(--bg-preto);
+    text-align: left;
+    padding: 5rem 1rem;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.titulo {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--azul-neon);
+    text-align: center;
+}
+
+.foto {
+    max-width: 360px;
+    overflow: hidden;
+    box-shadow: 10px 10px 20px 0px var(--azul-neon);
+    animation: sombra 5s ease-in-out infinite;
+    border: 2px solid var(--azul-claro);
+}
+
+@keyframes sombra {
+    0%, 100% {
+      opacity: 0.9;
+      box-shadow: 10px 30px 20px 0px var(--azul-neon);
+      
+    }
+    50% {
+      opacity: 0.3;
+      box-shadow: 0px 0px 20px 0px var(--azul-neon);
+    }
+}
+
+.conteudo-sobre-mim {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+.texto {
+    width: 700px;
+    margin: auto 2rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-align: initial;
+}
+
+#verMais-sobreMim {
+    display: none;
+}
+
+@media screen and (max-width:900px) {
+    .conteudo-sobre-mim {
+        flex-direction: column-reverse;
+    }
+
+    .texto {
+        width: auto;
+    }
+
+    #verMais-sobreMim {
+        display: flex;
+    }
+
+    .sobre-mim {
+        height: 400px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .sobre-mim::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40%;
+        background: linear-gradient(transparent, #131212fd);
+    }
+
+    .sobre-mim.active {
+        height: auto;
+    }
+    
+    .sobre-mim.active::before {
+        visibility: hidden;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .foto {
+        width: 320px;
+    }
+}
